@@ -1,0 +1,46 @@
+<view class="trip">
+  <block wx:for="{{ article.content }}" wx:for-item="item">
+    <view class="trip-top" wx:if="{{ item.type === 0 }}">
+      <view class="trip-info">
+        <view class="h1">{{ item.value }}</view>
+        <view class="detail"><text>三六药店为您服务</text><text></text><text></text></view>
+      </view>
+    </view>
+
+    <view class="trip-wps" wx:if="{{ item.type === 1 }}">
+      <view class="day">
+        <view class="day-marker"><text class="circle"></text>{{ item.value }}</view>
+        <view class="wp-sep clear-both"></view>
+      </view>
+    </view>
+
+    <view class="trip-wps" wx:if="{{ item.type === 2 }}">
+      <view class="day">
+        <view class="day-content">
+          <view class="text">{{ item.value }}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="trip-wps" wx:if="{{ item.type === 3 }}">
+      <view class="day">
+        <view class="day-content">
+          <view class="highlight">{{ item.value }}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="trip-wps" wx:if="{{ item.type === 4 }}">
+      <view class="day">
+        <view class="day-content">
+          <view class="photo-ctn">
+            <image style="width: 100%; height: 200px; background-color: #eeeeee;" class="cover" src="http://ow47de8h7.bkt.clouddn.com/{{ item.value }}"></image>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+</view>

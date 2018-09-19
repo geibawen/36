@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index2",
+    "pages/about/about",
+    "pages/trip/trip",
+    "pages/share/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4abdcc",
+    "navigationBarTitleText": "三六药店",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#b0b0b0",
+    "selectedColor": "#4abdcc",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/index_normal.png",
+      "selectedIconPath": "images/index_pressed.png",
+      "text": "对症下药"
+    },{
+      "pagePath": "pages/index2/index2",
+      "iconPath": "images/index_normal.png",
+      "selectedIconPath": "images/index_pressed.png",
+      "text": "家中常备"
+    },{
+      "pagePath": "pages/about/about",
+      "iconPath": "images/explore_normal.png",
+      "selectedIconPath": "images/explore_pressed.png",
+      "text": "关于我们"
+    }]
+  },
+  "debug": true
+}

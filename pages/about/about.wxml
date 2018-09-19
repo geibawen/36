@@ -1,0 +1,13 @@
+<import src="../../components/trip/trip.wxml"/>
+
+<scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"  bindscrolltolower="loadMore" lower-threshold="800">
+
+    <view bindtap="jumpApp" class="textview" style="margin-top: 130rpx">
+      <image style="flex-direction: column; display: flex;justify-content: center;align-items: center; width: 230px; height: 350px; background-color: #eeeeee;" class="cover" src="../../images/about_map.png"></image>
+    </view>
+
+    <view class="textview" bindtap="jumpApp">
+      <view class="highlight">点击查看详情</view>
+    </view>
+
+</scroll-view>

@@ -1,0 +1,43 @@
+<import src="../../components/trip/trip.wxml"/>
+
+ <view class="container" style="overflow-y:hidden;background-image: url(https://awsbj0.fds.api.xiaomi.com/apptest/guide/test/main_bg.png); background-size:cover;height: 100%;"> 
+   <scroll-view class="list" style="width: {{ windowWidth }}px;height:100%;justify-content: center;align-items: center;" scroll-y="true"  bindscrolltolower="loadMore" lower-threshold="800">
+    <!-- <image style="flex-direction: column; justify-content: center;align-items: center; width: {{ windowWidth }}; height: {{ windowHeight }};" class="stretch" src="../../images/main_bg.png"> -->
+
+    <canvas wx:if="true" id="canvasTag" canvas-id="shareCanvas" style="display:true;width:{{ shareWidth }}px;height:{{ shareHeight + 50 }}px;"/>
+    
+    <!-- <view bindtap="jumpApp" class="textview" style="margin-top: 0rpx">
+      <image style="flex-direction: column; display: flex;justify-content: center;align-items: center; width: 230px; height: 350px; background-color: #eeeeee;" class="cover" src="../../images/about_map.png"></image>
+    </view>   -->
+
+    <view class="username">
+      <input bindinput="bindKeyInput1" style="color: #b8436a;background-color:#fff;" name="name1" placeholder="请输入您的名字" />
+    </view>
+
+    <image class="send" bindtap="jumpApp" src="https://awsbj0.fds.api.xiaomi.com/apptest/guide/test/send.png"></image>
+
+    <view class="familyname">
+      <input bindinput="bindKeyInput2" name="name2" style="background-color:#fff;" placeholder="朋友家人的名字" />
+    </view>
+
+     <view class="checkbox" style="background-color:#fff">
+      <view class="boxTitle">
+        <view style="background-color:#fff;">选择祝福语</view>
+      </view>
+
+      <checkbox-group style="margin-top:32rpx;margin-bottom:10rpx;" bindchange="checkboxChange">
+        <label class="boxLabel" wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+      </checkbox-group>
+      
+    </view> 
+
+    <view class="textview" bindtap="jumpApp">
+      <view class="highlight bottomBtn">制作团圆月饼</view>
+    </view>
+
+
+    <!-- </image> -->
+  </scroll-view> 
+ </view> 

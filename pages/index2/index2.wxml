@@ -1,0 +1,8 @@
+<import src="../../components/trip/trip.wxml"/>
+
+<scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"  bindscrolltolower="loadMore" lower-threshold="800">
+  <block wx:for="{{ articles }}" wx:for-item="article" wx:key="article.id" wx:if="{{ article.type === 1 }}">
+    <template is="m-article" data="{{article: article}}" />
+  </block>
+
+</scroll-view>
